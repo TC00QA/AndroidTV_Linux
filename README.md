@@ -13,10 +13,13 @@ I am a guide to installing linux on any cheap android TV box
     * Best performance
     * Additional notes
 * What boxes can be used
-* Flashing SD card
 * How to install linux (App)
+* Flashing SD card
+* Entering recovery mode
 * How to install linux (SD)
-*  How to install linux (EMMC Flash)
+* How to install linux (EMMC Flash)
+* My experience
+* Notes
 
 ## Where to source a box
 
@@ -58,25 +61,37 @@ The amlogic processors arent officially supported by ARMBIAN, however there is s
 
 Most boxes you find avaliable can be used, most of them are manufacturerd exactly the same. Your biggest factor at play will be the processor. It is down to you what processor you choose and why. Another main factor to be lookign out for when purchasing is the name of the box. This will be something like X96 Max or T95. They made have different designs but the install guides are pretty much the same aslong as they have the same 'name'.
 
+## How to install linux (App)
+
+If you want to run linux without installing it to the TV or SD card you can run it in android. The app most commonly used is: Debian noroot (Link in notes)
+
 ## Flashing SD card
 
 In my instance I install armbian using a pre-complied image for the S905x3 (See linked in notes). You must flash the image provided to an SD card, balena etcher is my preffered goto but rufus may work aswell. Ignore any errors that may get thrown during verification becuase two partitions are made. Once you have done this you can move onto the next step
 
 ## Entering recovery mode
 
-The easiest solution by far it the simplest one. On most (if not all) of these boxes there will be a 4 pole 3.5mm jack on the back labelled AV. If there is another jack on the back it might best best using a flashlight to identify what port contains a tac switch behind it (See notes)
+The easiest solution by far it the simplest one. On most (if not all) of these boxes there will be a 4 pole 3.5mm jack on the back labelled AV. If there is another jack on the back it might best best using a flashlight to identify what port contains a tac switch behind it (See notes) All you need to do with the box unplugged is hold down that switch. This is commonly done with a toothpick therfore is refferd to as 'the toothpick method'. While holding down the button simply plug the power back in. Once you see the first splashscreen (Typically the name of the box) stop pressing the button. You should then be able to see android recovery options.
 
-## How to install linux (App)
-
-If you want to run linux without installing it to the TV or SD card you can run it in android. The app most commonly used is: Debian noroot (Link in notes)
+Another method to enter recovery mode / install is to find an app called something along the lines of "Over the air update" or "System update". It will be an app somewhere in the app drawer. You can try searching for a "local" update file. There will be a button called local and it should automatically find the inserted SD card and there will typically be an option ending with .zip . You can simply click local, click the file ending with .zip and it shoudl install arbiam for you. I havent had success doing it this way as typically you also need an unlocked bootloader and this is something that varies manufacturer to manufacturer. I reccomend the 'toothpick' method.
 
 ## How to install linux (SD)
 
-Once you follow the guide to flash to your SD card you're done! There is nothing else you need to do, it is now running from the SD card. This means, however, everytime you need to get back into linux you will need to enter recovery mode
+Once you follow the guide to flash to your SD card you're done! There is nothing else you need to do, it is now running from the SD card. This means, however, everytime you need to get back into linux you will need to enter recovery mode.
 
 ##  How to install linux (EMMC Flash)
 
-# Notes
+Assuming your unit has EMMC and not ROM (Typically EMMC) you can easily install arbian to your android tv box. All you need to do is run the command: $ armbian-install . From there, it is fairly straight forward. If using ophub's pre-complied installer (or another pre-complied image for allwinner / rockchip cpu) you will be presented with some options. You need to setup the date and time and locale. You will also be presented with a table. This table is so that the right DTB file will be used. This HAS to be the correct DTB file. In the table will be the processor type and the box name. Make sure both of these are the same as your purchased box otherwise you might brick your box. Type in the correct ID and the install will begin. 
+
+The install can take between 10 - 30 mins, please, be patient. The box will install and work through everything at its own pace.
+
+Once everything is installed, remove the TF / SD card and unplug / replug the power in. You should see a splash screen then linux should continue to load.
+
+## My experience
+
+I managed to install armbian linux with a pre-compiled image from OPHUB. As it uses the S905x3 the kernel dosent support it. Becuase of this you can either use a pre-complied arbian build or rebuild the kernel yourself with their REPO. I managed to easily install linux and SSH into it via VSCode. I am running jenkins and docker. Using a 3 container docker build (One python, one MySQL and one NGINX) I am finding build times to be pleasantly surprising. It takes about 5 mins with the S905x3, compared to my desktop (i5 11300h) about 1 min. This performance is pleasantly suprising considering the S905x3 is rated 5W whereas the i5 is 30W. It is able to handle jenkins and this docker build easily with 4GB ram. In my testing also i only every hit about 50 degrees when building and deploying. This is surprising considering there is a relatively small metal heatsink on the APU. If you need some extra headroom It wouldnt be that hard to install a small laptop fan to help with cooling.
+
+## Notes
 
 I take NO credit for any content within the links, there are some links to other repos, the people who work to maintain these repos are amazing and I highly reccomened giving them a follow!
 
