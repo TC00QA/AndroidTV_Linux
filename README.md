@@ -1,6 +1,6 @@
 # What am I?
 
-I am a guide to installing linux on any cheap android TV box
+I am a guide to installing linux on any cheap android TV box, linux used here is ARMBIAN (Debian  or Ubuntu based)
 
 ## Table of contents
 * Where to source a box
@@ -28,17 +28,17 @@ You can source most boxes through marketplace, amazon or ebay. Make sure you are
 
 ## What to look out for
 
-As previously mentioned look out for misleading advertisments, as a rule of thumb the 4 main processors are as follows
+As previously mentioned, look out for misleading advertisments, as a rule of thumb the 4 main processors are as follows
 
 ### Amlogic S905*
 
-The amlogic S905x3 is the best processor to go for, be very carful when looking for listings of the S905. The normal S905 can handle a max of 2GB DDR2/DDR3 ram. This by far is the worst choice if you are looking for enough ram. Performace of the S905 is nothing to be snuffed at, however, for the same money you can buy the better S905x3. I would stick to the S905x3 for compatability. The S905x2 can be found but isnt as widely supported. The S905x3 is also perfect for machine learning as it has a built in NPU and NN Accelerator.
+The amlogic S905x3 is the best processor to go for, be very carful when looking for listings of the S905. The normal S905 can handle a max of 2GB DDR2/DDR3 ram. This by far is the worst choice if you are looking for 4GB of ram. Performace of the S905 is nothing to be snuffed at, however, for the same money you can buy the better S905x3. I would stick to the S905x3 for compatability. The S905x2 can be found but isnt as widely supported. The S905x3 is also perfect for machine learning as it has a built in NPU and NN Accelerator.
 
 A priavte REPO is the only source to find modern builds
 
 ### Allwinner H6
 
-The allwinner H6 is the older version of the H616. It sits somewhere performance wise inbetween the S905 and S905x3. This is a great chip if you can find it for cheaper. It supports up to 4GB of DDR3/DDR4 ram so should meet your needs. Additionally this silicon also has a slightly better GPU (Than the H616) if you need more graphical power.
+The allwinner H6 is the older version of the H616. It sits somewhere performance-wise inbetween the S905 and S905x3. This is a great chip if you can find it for cheaper (£10-£20). It supports up to 4GB of DDR3/DDR4 ram so should meet your needs. Additionally this silicon also has a slightly better GPU (Than the H616) if you need more graphical power.
 
 Armlogic has native support as some SBC's are built on this, there are plenty of prebuilt images out there
 
