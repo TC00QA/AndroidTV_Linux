@@ -101,9 +101,9 @@ I managed to install armbian linux with a pre-compiled image from OPHUB. As it u
 
 ## No thrills install
 
-Box I used: https://www.amazon.co.uk/Sleekview-Android-Cortex-Decode-USB3-0/dp/B094DB4TYR/ref=sr_1_1?crid=RXG40A02N633&keywords=h96+max&qid=1662988095&sprefix=h96+max%2Caps%2C87&sr=8-1
-Time: GMT
-Locale: London
+Box I used: https://www.amazon.co.uk/Sleekview-Android-Cortex-Decode-USB3-0/dp/B094DB4TYR/ref=sr_1_1?crid=RXG40A02N633&keywords=h96+max&qid=1662988095&sprefix=h96+max%2Caps%2C87&sr=8-1 \
+Time: GMT \
+Locale: London \
 DTB ID: 508
 
 ## Notes
