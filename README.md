@@ -11,8 +11,9 @@ I am a guide to installing linux on any cheap android TV box
   -- Allwinner H616
   -- Rockchip RK3318
   -- Best performance
+  -- Additional notes
 - What boxes can be used
-- What processors are supported
+- Flashing SD card
 - How to install linux (App)
 - How to install linux (SD)
 -  How to install linux (EMMC Flash)
@@ -44,9 +45,43 @@ If you are after raw GPU power this is definatley the chip to go for. With up to
 
 ### Best performance
 
--- Best CPU and NPU:        S905x3
--- Better CPU and OK GPU:     S905
--- Best GPU and OK CPU:     RK3318
--- Best efficieny and support:  H6
+-- Best CPU and NPU:        S905x3 \
+-- Better CPU and OK GPU:     S905 \
+-- Best GPU and OK CPU:     RK3318 \
+-- Best efficieny and support:  H6 \
+
+### Additional notes
+
+The amlogic processors arent officially supported by ARMBIAN, however there is someone who Is supporting them currently. You can either build your own kernel based on the most recent release or run a pre-complied image. Links are in the notes section
+
+## What boxes can be used
+
+Most boxes you find avaliable can be used, most of them are manufacturerd exactly the same. Your biggest factor at play will be the processor. It is down to you what processor you choose and why. Another main factor to be lookign out for when purchasing is the name of the box. This will be something like X96 Max or T95. They made have different designs but the install guides are pretty much the same aslong as they have the same 'name'.
+
+## Flashing SD card
+
+In my instance I install armbian using a pre-complied image for the S905x3 (See linked in notes). You must flash the image provided to an SD card, balena etcher is my preffered goto but rufus may work aswell. Ignore any errors that may get thrown during verification becuase two partitions are made. Once you have done this you can move onto the next step
+
+## Entering recovery mode
+
+The easiest solution by far it the simplest one. On most (if not all) of these boxes there will be a 4 pole 3.5mm jack on the back labelled AV. If there is another jack on the back it might best best using a flashlight to identify what port contains a tac switch behind it (See notes)
+
+## How to install linux (App)
+
+If you want to run linux without installing it to the TV or SD card you can run it in android. The app most commonly used is: Debian noroot (Link in notes)
+
+## How to install linux (SD)
+
+Once you follow the guide to flash to your SD card you're done! There is nothing else you need to do, it is now running from the SD card. This means, however, everytime you need to get back into linux you will need to enter recovery mode
+
+##  How to install linux (EMMC Flash)
 
 # Notes
+
+I take NO credit for any content within the links, there are some links to other repos, the people who work to maintain these repos are amazing and I highly reccomened giving them a follow!
+
+Debian noroot https://play.google.com/store/apps/details?id=com.cuntubuntu&hl=en_GB&gl=US
+
+S905* Prebuilt images https://github.com/ophub/amlogic-s9xxx-armbian
+
+Tac Switch https://www.google.com/search?q=tact+switch&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjM2vCSno_6AhUVaMAKHcwrCeYQ_AUoAXoECAEQAw&biw=1920&bih=937&dpr=1&safe=active&ssui=on
