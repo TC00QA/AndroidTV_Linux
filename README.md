@@ -3,20 +3,20 @@
 I am a guide to installing linux on any cheap android TV box
 
 ## Table of contents
-- Where to source a box
-- What to look out for
- - Processors used
-  - Amlogic S905*
-  - Allwinner H6
-  - Allwinner H616
-  - Rockchip RK3318
-  - Best performance
-  - Additional notes
-- What boxes can be used
-- Flashing SD card
-- How to install linux (App)
-- How to install linux (SD)
--  How to install linux (EMMC Flash)
+* Where to source a box
+* What to look out for
+ * Processors used
+  * Amlogic S905*
+  * Allwinner H6
+  * Allwinner H616
+  * Rockchip RK3318
+  * Best performance
+  * Additional notes
+* What boxes can be used
+* Flashing SD card
+* How to install linux (App)
+* How to install linux (SD)
+*  How to install linux (EMMC Flash)
 
 ## Where to source a box
 
